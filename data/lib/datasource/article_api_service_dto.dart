@@ -13,8 +13,8 @@ abstract class ArticleApiServiceDto {
 
   @GET('/everything')
   Future<ArticleResponseDto> getArticle({
-    @Query('q') String query = 'flutter',
-    @Query('from') String from = '2025-07-07',
+    @Query('q') String query = 'apple',
+    @Query('from') String from = '2025-08-05',
     @Query('sortBy') String sortBy = 'publishedAt',
     @Query('apiKey') String apiKey = ApiConstants.apiKey,
   });

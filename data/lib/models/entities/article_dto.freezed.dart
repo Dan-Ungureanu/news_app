@@ -12,8 +12,7 @@ part of 'article_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ArticleDto _$ArticleDtoFromJson(Map<String, dynamic> json) {
   return _ArticleDto.fromJson(json);
@@ -21,9 +20,9 @@ ArticleDto _$ArticleDtoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ArticleDto {
-  // required String id,
-  // required String name,
-  // required String? source,
+// required String id,
+// required String name,
+// required String? source,
   String? get title => throw _privateConstructorUsedError;
   String? get author => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
@@ -45,19 +44,17 @@ mixin _$ArticleDto {
 /// @nodoc
 abstract class $ArticleDtoCopyWith<$Res> {
   factory $ArticleDtoCopyWith(
-    ArticleDto value,
-    $Res Function(ArticleDto) then,
-  ) = _$ArticleDtoCopyWithImpl<$Res, ArticleDto>;
+          ArticleDto value, $Res Function(ArticleDto) then) =
+      _$ArticleDtoCopyWithImpl<$Res, ArticleDto>;
   @useResult
-  $Res call({
-    String? title,
-    String? author,
-    String? description,
-    String? url,
-    String? urlToImage,
-    String? publishedAt,
-    String? content,
-  });
+  $Res call(
+      {String? title,
+      String? author,
+      String? description,
+      String? url,
+      String? urlToImage,
+      String? publishedAt,
+      String? content});
 }
 
 /// @nodoc
@@ -83,39 +80,36 @@ class _$ArticleDtoCopyWithImpl<$Res, $Val extends ArticleDto>
     Object? publishedAt = freezed,
     Object? content = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            title: freezed == title
-                ? _value.title
-                : title // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            author: freezed == author
-                ? _value.author
-                : author // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            description: freezed == description
-                ? _value.description
-                : description // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            url: freezed == url
-                ? _value.url
-                : url // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            urlToImage: freezed == urlToImage
-                ? _value.urlToImage
-                : urlToImage // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            publishedAt: freezed == publishedAt
-                ? _value.publishedAt
-                : publishedAt // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            content: freezed == content
-                ? _value.content
-                : content // ignore: cast_nullable_to_non_nullable
-                      as String?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      title: freezed == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      author: freezed == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as String?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
+      urlToImage: freezed == urlToImage
+          ? _value.urlToImage
+          : urlToImage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publishedAt: freezed == publishedAt
+          ? _value.publishedAt
+          : publishedAt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      content: freezed == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
   }
 }
 
@@ -123,20 +117,18 @@ class _$ArticleDtoCopyWithImpl<$Res, $Val extends ArticleDto>
 abstract class _$$ArticleDtoImplCopyWith<$Res>
     implements $ArticleDtoCopyWith<$Res> {
   factory _$$ArticleDtoImplCopyWith(
-    _$ArticleDtoImpl value,
-    $Res Function(_$ArticleDtoImpl) then,
-  ) = __$$ArticleDtoImplCopyWithImpl<$Res>;
+          _$ArticleDtoImpl value, $Res Function(_$ArticleDtoImpl) then) =
+      __$$ArticleDtoImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    String? title,
-    String? author,
-    String? description,
-    String? url,
-    String? urlToImage,
-    String? publishedAt,
-    String? content,
-  });
+  $Res call(
+      {String? title,
+      String? author,
+      String? description,
+      String? url,
+      String? urlToImage,
+      String? publishedAt,
+      String? content});
 }
 
 /// @nodoc
@@ -144,9 +136,8 @@ class __$$ArticleDtoImplCopyWithImpl<$Res>
     extends _$ArticleDtoCopyWithImpl<$Res, _$ArticleDtoImpl>
     implements _$$ArticleDtoImplCopyWith<$Res> {
   __$$ArticleDtoImplCopyWithImpl(
-    _$ArticleDtoImpl _value,
-    $Res Function(_$ArticleDtoImpl) _then,
-  ) : super(_value, _then);
+      _$ArticleDtoImpl _value, $Res Function(_$ArticleDtoImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of ArticleDto
   /// with the given fields replaced by the non-null parameter values.
@@ -161,60 +152,57 @@ class __$$ArticleDtoImplCopyWithImpl<$Res>
     Object? publishedAt = freezed,
     Object? content = freezed,
   }) {
-    return _then(
-      _$ArticleDtoImpl(
-        title: freezed == title
-            ? _value.title
-            : title // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        author: freezed == author
-            ? _value.author
-            : author // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        description: freezed == description
-            ? _value.description
-            : description // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        url: freezed == url
-            ? _value.url
-            : url // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        urlToImage: freezed == urlToImage
-            ? _value.urlToImage
-            : urlToImage // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        publishedAt: freezed == publishedAt
-            ? _value.publishedAt
-            : publishedAt // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        content: freezed == content
-            ? _value.content
-            : content // ignore: cast_nullable_to_non_nullable
-                  as String?,
-      ),
-    );
+    return _then(_$ArticleDtoImpl(
+      title: freezed == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      author: freezed == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as String?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
+      urlToImage: freezed == urlToImage
+          ? _value.urlToImage
+          : urlToImage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publishedAt: freezed == publishedAt
+          ? _value.publishedAt
+          : publishedAt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      content: freezed == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ArticleDtoImpl implements _ArticleDto {
-  _$ArticleDtoImpl({
-    required this.title,
-    required this.author,
-    required this.description,
-    required this.url,
-    required this.urlToImage,
-    required this.publishedAt,
-    required this.content,
-  });
+  _$ArticleDtoImpl(
+      {required this.title,
+      required this.author,
+      required this.description,
+      required this.url,
+      required this.urlToImage,
+      required this.publishedAt,
+      required this.content});
 
   factory _$ArticleDtoImpl.fromJson(Map<String, dynamic> json) =>
       _$$ArticleDtoImplFromJson(json);
 
-  // required String id,
-  // required String name,
-  // required String? source,
+// required String id,
+// required String name,
+// required String? source,
   @override
   final String? title;
   @override
@@ -254,16 +242,8 @@ class _$ArticleDtoImpl implements _ArticleDto {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    title,
-    author,
-    description,
-    url,
-    urlToImage,
-    publishedAt,
-    content,
-  );
+  int get hashCode => Object.hash(runtimeType, title, author, description, url,
+      urlToImage, publishedAt, content);
 
   /// Create a copy of ArticleDto
   /// with the given fields replaced by the non-null parameter values.
@@ -275,27 +255,28 @@ class _$ArticleDtoImpl implements _ArticleDto {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ArticleDtoImplToJson(this);
+    return _$$ArticleDtoImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _ArticleDto implements ArticleDto {
-  factory _ArticleDto({
-    required final String? title,
-    required final String? author,
-    required final String? description,
-    required final String? url,
-    required final String? urlToImage,
-    required final String? publishedAt,
-    required final String? content,
-  }) = _$ArticleDtoImpl;
+  factory _ArticleDto(
+      {required final String? title,
+      required final String? author,
+      required final String? description,
+      required final String? url,
+      required final String? urlToImage,
+      required final String? publishedAt,
+      required final String? content}) = _$ArticleDtoImpl;
 
   factory _ArticleDto.fromJson(Map<String, dynamic> json) =
       _$ArticleDtoImpl.fromJson;
 
-  // required String id,
-  // required String name,
-  // required String? source,
+// required String id,
+// required String name,
+// required String? source,
   @override
   String? get title;
   @override

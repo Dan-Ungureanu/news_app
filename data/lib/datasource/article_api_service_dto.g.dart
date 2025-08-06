@@ -21,8 +21,8 @@ class _ArticleApiServiceDto implements ArticleApiServiceDto {
 
   @override
   Future<ArticleResponseDto> getArticle({
-    String query = 'flutter',
-    String from = '2025-07-07',
+    String query = 'apple',
+    String from = '2025-08-05',
     String sortBy = 'publishedAt',
     String apiKey = ApiConstants.apiKey,
   }) async {

@@ -1,6 +1,6 @@
 // lib/feature/home/pages/home_page.dart
 
-import 'package:featured/controller/article_controller.dart';
+// import 'package:featured/controller/article_controller.dart';
 import 'package:featured/controller/news_controller.dart';
 import 'package:featured/widgets/featured_list.dart';
 import 'package:featured/widgets/news_list.dart';

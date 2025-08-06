@@ -4,7 +4,7 @@ version: 1.0.0
 # repository: https://github.com/my_org/my_repo
 
 environment:
-  sdk: ^3.8.1
+  sdk: ^3.6.0
 publish_to: "none"
 # Add regular dependencies here.
 dependencies:
@@ -26,5 +26,5 @@ dev_dependencies:
   test: ^1.24.0
   build_runner: ^2.4.9
   json_serializable: ^6.9.2
-  retrofit_generator: ^9.7.0
+  retrofit_generator: ^9.6.0
   freezed: ^2.5.2

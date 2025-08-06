@@ -12,8 +12,7 @@ part of 'article_response_dto.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 ArticleResponseDto _$ArticleResponseDtoFromJson(Map<String, dynamic> json) {
   return _ArticleResponseDto.fromJson(json);
@@ -38,9 +37,8 @@ mixin _$ArticleResponseDto {
 /// @nodoc
 abstract class $ArticleResponseDtoCopyWith<$Res> {
   factory $ArticleResponseDtoCopyWith(
-    ArticleResponseDto value,
-    $Res Function(ArticleResponseDto) then,
-  ) = _$ArticleResponseDtoCopyWithImpl<$Res, ArticleResponseDto>;
+          ArticleResponseDto value, $Res Function(ArticleResponseDto) then) =
+      _$ArticleResponseDtoCopyWithImpl<$Res, ArticleResponseDto>;
   @useResult
   $Res call({String status, int totalResults, List<ArticleDto> articles});
 }
@@ -64,33 +62,29 @@ class _$ArticleResponseDtoCopyWithImpl<$Res, $Val extends ArticleResponseDto>
     Object? totalResults = null,
     Object? articles = null,
   }) {
-    return _then(
-      _value.copyWith(
-            status: null == status
-                ? _value.status
-                : status // ignore: cast_nullable_to_non_nullable
-                      as String,
-            totalResults: null == totalResults
-                ? _value.totalResults
-                : totalResults // ignore: cast_nullable_to_non_nullable
-                      as int,
-            articles: null == articles
-                ? _value.articles
-                : articles // ignore: cast_nullable_to_non_nullable
-                      as List<ArticleDto>,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String,
+      totalResults: null == totalResults
+          ? _value.totalResults
+          : totalResults // ignore: cast_nullable_to_non_nullable
+              as int,
+      articles: null == articles
+          ? _value.articles
+          : articles // ignore: cast_nullable_to_non_nullable
+              as List<ArticleDto>,
+    ) as $Val);
   }
 }
 
 /// @nodoc
 abstract class _$$ArticleResponseDtoImplCopyWith<$Res>
     implements $ArticleResponseDtoCopyWith<$Res> {
-  factory _$$ArticleResponseDtoImplCopyWith(
-    _$ArticleResponseDtoImpl value,
-    $Res Function(_$ArticleResponseDtoImpl) then,
-  ) = __$$ArticleResponseDtoImplCopyWithImpl<$Res>;
+  factory _$$ArticleResponseDtoImplCopyWith(_$ArticleResponseDtoImpl value,
+          $Res Function(_$ArticleResponseDtoImpl) then) =
+      __$$ArticleResponseDtoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String status, int totalResults, List<ArticleDto> articles});
@@ -100,10 +94,9 @@ abstract class _$$ArticleResponseDtoImplCopyWith<$Res>
 class __$$ArticleResponseDtoImplCopyWithImpl<$Res>
     extends _$ArticleResponseDtoCopyWithImpl<$Res, _$ArticleResponseDtoImpl>
     implements _$$ArticleResponseDtoImplCopyWith<$Res> {
-  __$$ArticleResponseDtoImplCopyWithImpl(
-    _$ArticleResponseDtoImpl _value,
-    $Res Function(_$ArticleResponseDtoImpl) _then,
-  ) : super(_value, _then);
+  __$$ArticleResponseDtoImplCopyWithImpl(_$ArticleResponseDtoImpl _value,
+      $Res Function(_$ArticleResponseDtoImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of ArticleResponseDto
   /// with the given fields replaced by the non-null parameter values.
@@ -114,33 +107,31 @@ class __$$ArticleResponseDtoImplCopyWithImpl<$Res>
     Object? totalResults = null,
     Object? articles = null,
   }) {
-    return _then(
-      _$ArticleResponseDtoImpl(
-        status: null == status
-            ? _value.status
-            : status // ignore: cast_nullable_to_non_nullable
-                  as String,
-        totalResults: null == totalResults
-            ? _value.totalResults
-            : totalResults // ignore: cast_nullable_to_non_nullable
-                  as int,
-        articles: null == articles
-            ? _value._articles
-            : articles // ignore: cast_nullable_to_non_nullable
-                  as List<ArticleDto>,
-      ),
-    );
+    return _then(_$ArticleResponseDtoImpl(
+      status: null == status
+          ? _value.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as String,
+      totalResults: null == totalResults
+          ? _value.totalResults
+          : totalResults // ignore: cast_nullable_to_non_nullable
+              as int,
+      articles: null == articles
+          ? _value._articles
+          : articles // ignore: cast_nullable_to_non_nullable
+              as List<ArticleDto>,
+    ));
   }
 }
 
 /// @nodoc
 @JsonSerializable()
 class _$ArticleResponseDtoImpl implements _ArticleResponseDto {
-  const _$ArticleResponseDtoImpl({
-    required this.status,
-    required this.totalResults,
-    required final List<ArticleDto> articles,
-  }) : _articles = articles;
+  const _$ArticleResponseDtoImpl(
+      {required this.status,
+      required this.totalResults,
+      required final List<ArticleDto> articles})
+      : _articles = articles;
 
   factory _$ArticleResponseDtoImpl.fromJson(Map<String, dynamic> json) =>
       _$$ArticleResponseDtoImplFromJson(json);
@@ -175,12 +166,8 @@ class _$ArticleResponseDtoImpl implements _ArticleResponseDto {
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    status,
-    totalResults,
-    const DeepCollectionEquality().hash(_articles),
-  );
+  int get hashCode => Object.hash(runtimeType, status, totalResults,
+      const DeepCollectionEquality().hash(_articles));
 
   /// Create a copy of ArticleResponseDto
   /// with the given fields replaced by the non-null parameter values.
@@ -189,22 +176,21 @@ class _$ArticleResponseDtoImpl implements _ArticleResponseDto {
   @pragma('vm:prefer-inline')
   _$$ArticleResponseDtoImplCopyWith<_$ArticleResponseDtoImpl> get copyWith =>
       __$$ArticleResponseDtoImplCopyWithImpl<_$ArticleResponseDtoImpl>(
-        this,
-        _$identity,
-      );
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$$ArticleResponseDtoImplToJson(this);
+    return _$$ArticleResponseDtoImplToJson(
+      this,
+    );
   }
 }
 
 abstract class _ArticleResponseDto implements ArticleResponseDto {
-  const factory _ArticleResponseDto({
-    required final String status,
-    required final int totalResults,
-    required final List<ArticleDto> articles,
-  }) = _$ArticleResponseDtoImpl;
+  const factory _ArticleResponseDto(
+      {required final String status,
+      required final int totalResults,
+      required final List<ArticleDto> articles}) = _$ArticleResponseDtoImpl;
 
   factory _ArticleResponseDto.fromJson(Map<String, dynamic> json) =
       _$ArticleResponseDtoImpl.fromJson;
