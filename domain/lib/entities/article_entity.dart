@@ -5,14 +5,15 @@ part 'article_entity.freezed.dart';
 @freezed
 class ArticleEntity with _$ArticleEntity {
   factory ArticleEntity({
-    required String id,
-    required String name,
-    required String title,
-    required String author,
-    required String description,
-    required String url,
-    required String urlToImage,
-    required String publishedAt,
-    required String content,
+    // required String? id,
+    // required String? source,
+    // required String? name,
+    required String? title,
+    required String? author,
+    required String? description,
+    required String? url,
+    required String? urlToImage,
+    required String? publishedAt,
+    required String? content,
   }) = _ArticleEntity;
 }

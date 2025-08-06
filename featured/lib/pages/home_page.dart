@@ -1,5 +1,6 @@
 // lib/feature/home/pages/home_page.dart
 
+import 'package:featured/controller/article_controller.dart';
 import 'package:featured/controller/news_controller.dart';
 import 'package:featured/widgets/featured_list.dart';
 import 'package:featured/widgets/news_list.dart';
@@ -9,15 +10,27 @@ import 'package:featured/widgets/seeAll_News_Button.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HomePage extends StatelessWidget {
-  final NewsController controller = Get.find();
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
-  HomePage({super.key});
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  NewsController get controller => Get.find();
+
+  @override
+  void initState() {
+    super.initState();
+    Get.put(NewsController());
+    // Get.put(ArticleController());
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('')),
+      // appBar: AppBar(title: const Text(''), backgroundColor: Colors.white),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10.0),
         child: Obx(() {
@@ -32,6 +45,7 @@ class HomePage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: [
+                SizedBox(height: 60),
                 Row(
                   children: [
                     Text(
@@ -45,7 +59,7 @@ class HomePage extends StatelessWidget {
                     seeAllFeaturedButton(),
                   ],
                 ),
-                featuredList(controller.newsList),
+                FeaturedList(controller.newsList),
                 Row(
                   children: [
                     Text(
@@ -59,7 +73,7 @@ class HomePage extends StatelessWidget {
                     seeAllNewsButton(),
                   ],
                 ),
-                newsList(controller.newsList),
+                NewsList(controller.newsList),
               ],
             ),
           );

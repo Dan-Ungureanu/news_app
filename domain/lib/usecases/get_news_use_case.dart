@@ -7,7 +7,7 @@ import 'package:common/constants/failure_class.dart';
 class GetArticlesUseCase {
   final ArticleRepository repository;
 
-  GetArticlesUseCase(this.repository);
+  GetArticlesUseCase({required this.repository});
 
   Future<Either<Failure, List<ArticleEntity>>> call() {
     return repository.getAllArticle();

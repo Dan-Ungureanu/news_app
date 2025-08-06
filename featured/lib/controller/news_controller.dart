@@ -1,13 +1,12 @@
-// import 'package:dartz/dartz.dart';
-// import 'package:domain/domain.dart';
 import 'package:domain/usecases/get_news_use_case.dart';
 import 'package:get/get.dart';
 import 'package:domain/entities/article_entity.dart';
+import 'package:get_it/get_it.dart';
 
 class NewsController extends GetxController {
-  final GetArticlesUseCase getArticlesUseCase;
+  final GetArticlesUseCase getArticlesUseCase = GetIt.instance.get();
 
-  NewsController({required this.getArticlesUseCase});
+  // NewsController({required this.getArticlesUseCase});
 
   var newsList = <ArticleEntity>[].obs;
   var isLoading = true.obs;

@@ -8,15 +8,16 @@ part 'article_dto.g.dart';
 @freezed
 class ArticleDto with _$ArticleDto {
   factory ArticleDto({
-    required String id,
-    required String name,
-    required String title,
-    required String author,
-    required String description,
-    required String url,
-    required String urlToImage,
-    required String publishedAt,
-    required String content,
+    // required String id,
+    // required String name,
+    // required String? source,
+    required String? title,
+    required String? author,
+    required String? description,
+    required String? url,
+    required String? urlToImage,
+    required String? publishedAt,
+    required String? content,
   }) = _ArticleDto;
 
   factory ArticleDto.fromJson(Map<String, dynamic> json) =>
@@ -25,8 +26,9 @@ class ArticleDto with _$ArticleDto {
 
 extension ArticleDtoX on ArticleDto {
   ArticleEntity toEntity() => ArticleEntity(
-    id: id,
-    name: name,
+    // id: id,
+    // name: name,
+    // source: source,
     title: title,
     author: author,
     description: description,
