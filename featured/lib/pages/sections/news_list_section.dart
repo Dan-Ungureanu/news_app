@@ -55,8 +55,7 @@ class NewsList extends StatelessWidget {
                                 article.urlToImage != null &&
                                     article.urlToImage!.isNotEmpty
                                 ? NetworkImage(article.urlToImage!)
-                                : const AssetImage('images/unavailable.png')
-                                      as NetworkImage,
+                                : const AssetImage('images/unavailable.png'),
                             fit: BoxFit.cover,
                           ),
                         ),
