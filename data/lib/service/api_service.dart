@@ -1,7 +1,7 @@
 import 'package:common/constants/api_constants.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/retrofit.dart';
-import 'package:data/article_response_dto.dart'; // DTO-ul tău
+import 'package:data/response/article_response_dto.dart'; // DTO-ul tău
 
 part 'api_service.g.dart';
 

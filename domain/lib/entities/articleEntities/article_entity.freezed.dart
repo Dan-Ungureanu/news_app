@@ -12,14 +12,13 @@ part of 'article_entity.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-  'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models',
-);
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$ArticleEntity {
-  // required String? id,
-  // required String? source,
-  // required String? name,
+// required String? id,
+// required List source,
+// required String? name,
   String? get title => throw _privateConstructorUsedError;
   String? get author => throw _privateConstructorUsedError;
   String? get description => throw _privateConstructorUsedError;
@@ -38,19 +37,17 @@ mixin _$ArticleEntity {
 /// @nodoc
 abstract class $ArticleEntityCopyWith<$Res> {
   factory $ArticleEntityCopyWith(
-    ArticleEntity value,
-    $Res Function(ArticleEntity) then,
-  ) = _$ArticleEntityCopyWithImpl<$Res, ArticleEntity>;
+          ArticleEntity value, $Res Function(ArticleEntity) then) =
+      _$ArticleEntityCopyWithImpl<$Res, ArticleEntity>;
   @useResult
-  $Res call({
-    String? title,
-    String? author,
-    String? description,
-    String? url,
-    String? urlToImage,
-    String? publishedAt,
-    String? content,
-  });
+  $Res call(
+      {String? title,
+      String? author,
+      String? description,
+      String? url,
+      String? urlToImage,
+      String? publishedAt,
+      String? content});
 }
 
 /// @nodoc
@@ -76,39 +73,36 @@ class _$ArticleEntityCopyWithImpl<$Res, $Val extends ArticleEntity>
     Object? publishedAt = freezed,
     Object? content = freezed,
   }) {
-    return _then(
-      _value.copyWith(
-            title: freezed == title
-                ? _value.title
-                : title // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            author: freezed == author
-                ? _value.author
-                : author // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            description: freezed == description
-                ? _value.description
-                : description // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            url: freezed == url
-                ? _value.url
-                : url // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            urlToImage: freezed == urlToImage
-                ? _value.urlToImage
-                : urlToImage // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            publishedAt: freezed == publishedAt
-                ? _value.publishedAt
-                : publishedAt // ignore: cast_nullable_to_non_nullable
-                      as String?,
-            content: freezed == content
-                ? _value.content
-                : content // ignore: cast_nullable_to_non_nullable
-                      as String?,
-          )
-          as $Val,
-    );
+    return _then(_value.copyWith(
+      title: freezed == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      author: freezed == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as String?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
+      urlToImage: freezed == urlToImage
+          ? _value.urlToImage
+          : urlToImage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publishedAt: freezed == publishedAt
+          ? _value.publishedAt
+          : publishedAt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      content: freezed == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ) as $Val);
   }
 }
 
@@ -116,20 +110,18 @@ class _$ArticleEntityCopyWithImpl<$Res, $Val extends ArticleEntity>
 abstract class _$$ArticleEntityImplCopyWith<$Res>
     implements $ArticleEntityCopyWith<$Res> {
   factory _$$ArticleEntityImplCopyWith(
-    _$ArticleEntityImpl value,
-    $Res Function(_$ArticleEntityImpl) then,
-  ) = __$$ArticleEntityImplCopyWithImpl<$Res>;
+          _$ArticleEntityImpl value, $Res Function(_$ArticleEntityImpl) then) =
+      __$$ArticleEntityImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({
-    String? title,
-    String? author,
-    String? description,
-    String? url,
-    String? urlToImage,
-    String? publishedAt,
-    String? content,
-  });
+  $Res call(
+      {String? title,
+      String? author,
+      String? description,
+      String? url,
+      String? urlToImage,
+      String? publishedAt,
+      String? content});
 }
 
 /// @nodoc
@@ -137,9 +129,8 @@ class __$$ArticleEntityImplCopyWithImpl<$Res>
     extends _$ArticleEntityCopyWithImpl<$Res, _$ArticleEntityImpl>
     implements _$$ArticleEntityImplCopyWith<$Res> {
   __$$ArticleEntityImplCopyWithImpl(
-    _$ArticleEntityImpl _value,
-    $Res Function(_$ArticleEntityImpl) _then,
-  ) : super(_value, _then);
+      _$ArticleEntityImpl _value, $Res Function(_$ArticleEntityImpl) _then)
+      : super(_value, _then);
 
   /// Create a copy of ArticleEntity
   /// with the given fields replaced by the non-null parameter values.
@@ -154,57 +145,54 @@ class __$$ArticleEntityImplCopyWithImpl<$Res>
     Object? publishedAt = freezed,
     Object? content = freezed,
   }) {
-    return _then(
-      _$ArticleEntityImpl(
-        title: freezed == title
-            ? _value.title
-            : title // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        author: freezed == author
-            ? _value.author
-            : author // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        description: freezed == description
-            ? _value.description
-            : description // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        url: freezed == url
-            ? _value.url
-            : url // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        urlToImage: freezed == urlToImage
-            ? _value.urlToImage
-            : urlToImage // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        publishedAt: freezed == publishedAt
-            ? _value.publishedAt
-            : publishedAt // ignore: cast_nullable_to_non_nullable
-                  as String?,
-        content: freezed == content
-            ? _value.content
-            : content // ignore: cast_nullable_to_non_nullable
-                  as String?,
-      ),
-    );
+    return _then(_$ArticleEntityImpl(
+      title: freezed == title
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String?,
+      author: freezed == author
+          ? _value.author
+          : author // ignore: cast_nullable_to_non_nullable
+              as String?,
+      description: freezed == description
+          ? _value.description
+          : description // ignore: cast_nullable_to_non_nullable
+              as String?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
+      urlToImage: freezed == urlToImage
+          ? _value.urlToImage
+          : urlToImage // ignore: cast_nullable_to_non_nullable
+              as String?,
+      publishedAt: freezed == publishedAt
+          ? _value.publishedAt
+          : publishedAt // ignore: cast_nullable_to_non_nullable
+              as String?,
+      content: freezed == content
+          ? _value.content
+          : content // ignore: cast_nullable_to_non_nullable
+              as String?,
+    ));
   }
 }
 
 /// @nodoc
 
 class _$ArticleEntityImpl implements _ArticleEntity {
-  _$ArticleEntityImpl({
-    required this.title,
-    required this.author,
-    required this.description,
-    required this.url,
-    required this.urlToImage,
-    required this.publishedAt,
-    required this.content,
-  });
+  _$ArticleEntityImpl(
+      {required this.title,
+      required this.author,
+      required this.description,
+      required this.url,
+      required this.urlToImage,
+      required this.publishedAt,
+      required this.content});
 
-  // required String? id,
-  // required String? source,
-  // required String? name,
+// required String? id,
+// required List source,
+// required String? name,
   @override
   final String? title;
   @override
@@ -243,16 +231,8 @@ class _$ArticleEntityImpl implements _ArticleEntity {
   }
 
   @override
-  int get hashCode => Object.hash(
-    runtimeType,
-    title,
-    author,
-    description,
-    url,
-    urlToImage,
-    publishedAt,
-    content,
-  );
+  int get hashCode => Object.hash(runtimeType, title, author, description, url,
+      urlToImage, publishedAt, content);
 
   /// Create a copy of ArticleEntity
   /// with the given fields replaced by the non-null parameter values.
@@ -264,19 +244,18 @@ class _$ArticleEntityImpl implements _ArticleEntity {
 }
 
 abstract class _ArticleEntity implements ArticleEntity {
-  factory _ArticleEntity({
-    required final String? title,
-    required final String? author,
-    required final String? description,
-    required final String? url,
-    required final String? urlToImage,
-    required final String? publishedAt,
-    required final String? content,
-  }) = _$ArticleEntityImpl;
+  factory _ArticleEntity(
+      {required final String? title,
+      required final String? author,
+      required final String? description,
+      required final String? url,
+      required final String? urlToImage,
+      required final String? publishedAt,
+      required final String? content}) = _$ArticleEntityImpl;
 
-  // required String? id,
-  // required String? source,
-  // required String? name,
+// required String? id,
+// required List source,
+// required String? name,
   @override
   String? get title;
   @override

@@ -1,5 +1,5 @@
+import 'package:domain/entities/articleEntities/article_entity.dart';
 import 'package:get/get.dart';
-import 'package:domain/entities/article_entity.dart';
 
 class ArticleController extends GetxController {
   ArticleEntity article;
@@ -10,7 +10,6 @@ class ArticleController extends GetxController {
   void onInit() {
     super.onInit();
 
-    // Preluăm articolul transmis prin Get.arguments
     final args = Get.arguments;
     if (args is ArticleEntity) {
       article = args;

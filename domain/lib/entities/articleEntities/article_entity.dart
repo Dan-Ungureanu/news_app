@@ -5,9 +5,6 @@ part 'article_entity.freezed.dart';
 @freezed
 class ArticleEntity with _$ArticleEntity {
   factory ArticleEntity({
-    // required String? id,
-    // required String? source,
-    // required String? name,
     required String? title,
     required String? author,
     required String? description,

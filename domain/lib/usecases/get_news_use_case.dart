@@ -1,6 +1,5 @@
 import 'package:dartz/dartz.dart';
-// import 'package:domain/domain.dart';
-import '../entities/article_entity.dart';
+import '../entities/articleEntities/article_entity.dart';
 import '../repositories/article_repository.dart';
 import 'package:common/constants/failure_class.dart';
 

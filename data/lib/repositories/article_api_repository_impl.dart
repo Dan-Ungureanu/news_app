@@ -2,8 +2,7 @@ import 'package:common/constants/failure_class.dart';
 import 'package:data/datasource/article_api_service_dto.dart';
 import 'package:dartz/dartz.dart';
 import 'package:data/models/entities/article_dto.dart';
-// import 'package:domain/domain.dart';
-import 'package:domain/entities/article_entity.dart';
+import 'package:domain/entities/articleEntities/article_entity.dart';
 import 'package:domain/repositories/article_repository.dart';
 import 'package:dio/dio.dart';
 

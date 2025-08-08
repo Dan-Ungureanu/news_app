@@ -1,4 +1,4 @@
-import 'package:featured/pages/home_page.dart';
+import 'package:featured/pages/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 class NewsPage extends StatefulWidget {

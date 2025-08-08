@@ -1,10 +1,10 @@
-import 'package:data/article_response_dto.dart';
+import 'package:data/response/article_response_dto.dart';
 import 'package:dio/dio.dart';
 import 'package:retrofit/error_logger.dart';
 import 'package:retrofit/http.dart';
 import 'package:common/constants/api_constants.dart';
 
-part 'article_api_service_dto.g.dart'; // fișier generat automat
+part 'article_api_service_dto.g.dart';
 
 @RestApi(baseUrl: ApiConstants.baseUrl)
 abstract class ArticleApiServiceDto {

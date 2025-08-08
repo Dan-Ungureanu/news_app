@@ -1,5 +1,12 @@
-// import 'package:domain/domain.dart';
-import 'package:domain/entities/article_entity.dart';
+import 'dart:math';
+
+import 'package:domain/entities/articleEntities/article_entity.dart';
+import 'package:featured/widgets/category_widget.dart';
+import 'package:featured/widgets/comment_widget.dart';
+import 'package:featured/widgets/like_widget.dart';
+import 'package:featured/widgets/name_icon_widget.dart';
+import 'package:featured/widgets/number_of_comment_widget.dart';
+import 'package:featured/widgets/number_of_favorite_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get_rx/src/rx_types/rx_types.dart';
 
@@ -16,7 +23,8 @@ class NewsList extends StatelessWidget {
       itemCount: newsList.length,
       itemBuilder: (context, index) {
         final article = newsList[index];
-
+        final radomNumber = Random();
+        int number = radomNumber.nextInt(5);
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -34,7 +42,6 @@ class NewsList extends StatelessWidget {
                 children: [
                   Row(
                     children: [
-                      // ✅ Image from Network
                       Container(
                         width: 156,
                         height: 156,
@@ -44,16 +51,16 @@ class NewsList extends StatelessWidget {
                             bottomLeft: Radius.circular(16.0),
                           ),
                           image: DecorationImage(
-                            image: article.urlToImage != null
+                            image:
+                                article.urlToImage != null &&
+                                    article.urlToImage!.isNotEmpty
                                 ? NetworkImage(article.urlToImage!)
-                                : const AssetImage('images/no-image.png')
-                                      as ImageProvider,
+                                : const AssetImage('images/unavailable.png')
+                                      as NetworkImage,
                             fit: BoxFit.cover,
                           ),
                         ),
                       ),
-                      // AssetImage('images/no-image.png'),
-                      // ✅ Article Content
                       Expanded(
                         child: Container(
                           padding: const EdgeInsets.all(10.0),
@@ -61,7 +68,6 @@ class NewsList extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              // Title
                               Text(
                                 article.title ?? 'No Title',
                                 style: Theme.of(context).textTheme.bodyMedium
@@ -73,20 +79,16 @@ class NewsList extends StatelessWidget {
                                 overflow: TextOverflow.ellipsis,
                               ),
 
-                              // Source and Category
                               Row(
                                 crossAxisAlignment: CrossAxisAlignment.center,
                                 children: [
-                                  const Icon(
-                                    Icons.newspaper,
-                                    size: 16,
-                                    color: Colors.red,
+                                  CircleAvatar(
+                                    radius: 15,
+                                    backgroundImage: iconCategories[number],
                                   ),
                                   const SizedBox(width: 5),
                                   Text(
-                                    (article.author?.length ?? 0) > 10
-                                        ? '${article.author!.substring(0, 10)}...'
-                                        : article.author ?? 'No Author',
+                                    textCategory[number],
                                     style: Theme.of(context).textTheme.bodySmall
                                         ?.copyWith(
                                           color: Colors.black,
@@ -95,69 +97,26 @@ class NewsList extends StatelessWidget {
                                         ),
                                   ),
                                   const SizedBox(width: 16),
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(
-                                      horizontal: 8,
-                                    ),
-                                    height: 20,
-                                    decoration: BoxDecoration(
-                                      border: Border.all(color: Colors.red),
-                                      borderRadius: BorderRadius.circular(24.0),
-                                    ),
-                                    child: Center(
-                                      child: Text(
-                                        'News', // sau orice alt tip
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodySmall
-                                            ?.copyWith(
-                                              color: Colors.red,
-                                              fontSize: 12,
-                                              fontWeight: FontWeight.w700,
-                                            ),
-                                      ),
-                                    ),
-                                  ),
+                                  CategoryWidget(),
                                 ],
                               ),
 
-                              // Stats (mocked for now)
                               Row(
                                 mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
                                 children: [
                                   Row(
                                     children: [
-                                      const Icon(
-                                        Icons.favorite,
-                                        size: 12,
-                                        color: Colors.red,
-                                      ),
+                                      LikeWidget(),
                                       const SizedBox(width: 4),
-                                      Text(
-                                        '381.4k',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodySmall
-                                            ?.copyWith(fontSize: 10),
-                                      ),
+                                      NumberOfFavoriteWidget(),
                                     ],
                                   ),
                                   Row(
                                     children: [
-                                      const Icon(
-                                        Icons.comment,
-                                        size: 12,
-                                        color: Colors.red,
-                                      ),
+                                      CommentWidget(),
                                       const SizedBox(width: 4),
-                                      Text(
-                                        '165.3k',
-                                        style: Theme.of(context)
-                                            .textTheme
-                                            .bodySmall
-                                            ?.copyWith(fontSize: 10),
-                                      ),
+                                      NumberOfCommentWidget(),
                                     ],
                                   ),
                                   Image.asset('images/flag.png'),
